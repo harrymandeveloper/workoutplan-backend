@@ -26,6 +26,6 @@ Back-end:
 
 Stretch goals:
 
-Adding checkboxes.
+Adding checkboxes to measure progress – which potentially can be put into local storage (React) and a checkbox with a timer.
 
 Adding a login and saving progress to local storage.
