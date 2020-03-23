@@ -20,7 +20,25 @@ Back-end:
 - Using Laravel, the back-end consists of an API with two databases, an exercise database and a days of the week database.
 - There is a 'one to many' relationship between days of the week and these exercises.
 - Each exercise carries a title and a short description.
-- Each day carries a date and a day of the week.
+- Each day consists of a number 1-7 and a series of exercises per day.
+
+Database in detail:
+https://docs.google.com/drawings/d/14N_clbtJ6jqmp6e97SOw3lfHR_DH3sF2H0lZYBsZFjI/edit?usp=sharing
+
+Days-of-the-Week
+
+ID
+Exercise-IDs
+
+
+
+Exercises
+
+ID
+Exercise-Name
+Repetitions
+Image-URL
+Difficulty
 
 
 
