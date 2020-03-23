@@ -29,3 +29,5 @@ Stretch goals:
 Adding checkboxes to measure progress – which potentially can be put into local storage (React) and a checkbox with a timer.
 
 Adding a login and saving progress to local storage.
+
+Add in a length of time and and an increased number of repetitions per set.
