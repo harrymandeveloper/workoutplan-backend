@@ -5,6 +5,9 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+use App\Exercise;
+use App\Http\Resources\API\DaysResource;
+
 class Days extends Controller
 {
     /**
@@ -14,7 +17,7 @@ class Days extends Controller
      */
     public function index()
     {
-        echo 'hello world';
+        return DaysResource::collection(Exercise::all());
     }
 
     /**
