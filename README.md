@@ -60,7 +60,7 @@ This will return an array of day objects with an id for ea
     ]
 }
 ```
-#### `GET/day/<id>`
+#### `GET/days/<id>`
 This will return an array of exercises for the specified day
 #### Data Format
 ```json
