@@ -40,7 +40,59 @@ Repetitions
 Image-URL
 Difficulty
 
-
+### Exercises
+#### `GET/days`
+This will return an array of day objects with an id for ea
+#### Data Format
+```json
+{
+    "days" : [
+        {
+            "id" : 1,
+            "exercises" : [
+                "push-ups",
+                "pull-ups",
+                "burpees",
+                "crunches"
+            ],
+            "numberOfDays" : 7,
+        }
+    ]
+}
+```
+#### `GET/day/<id>`
+This will return an array of exercises for the specified day
+#### Data Format
+```json
+{
+    "exercises" : [
+        {
+            "name" : "push-ups",
+            "description" : "...",
+            "reps" : 8,
+            "imageURL" : "..."
+        }
+        {
+            "name" : "pull-ups",
+            "description" : "...",
+            "reps" : 5,
+            "imageURL" : "..."
+        }
+        {
+            "name" : "burpees",
+            "description" : "...",
+            "reps" : 12,
+            "imageURL" : "..."
+        }
+        {
+            "name" : "crunches",
+            "description" : "...",
+            "reps" : 12,
+            "imageURL" : "..."
+        }
+    ]
+}
+```
 
 Stretch goals:
 
