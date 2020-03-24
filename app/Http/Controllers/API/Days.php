@@ -4,6 +4,7 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Exercise;
 
 use App\Exercise;
 use App\Http\Resources\API\DaysResource;
