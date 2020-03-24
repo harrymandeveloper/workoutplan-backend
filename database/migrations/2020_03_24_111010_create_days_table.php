@@ -14,7 +14,7 @@ class CreateDaysTable extends Migration
     public function up()
     {
         Schema::create('days', function (Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('id');
             $table->string('dayName');
             $table->integer('dayNumber');
             $table->string('exercise1');
@@ -22,6 +22,14 @@ class CreateDaysTable extends Migration
             $table->string('exercise3');
             $table->string('exercise4');
             $table->timestamps();
+        });
+        
+        Schema::create('day_exercise', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->bigInteger('day_id')->unsigned();
+            $table->bigInteger('exercise_id')->unsigned();
+            $table->foreign("day_id")->references("id")->on("days")->onDelete("cascade");
+            $table->foreign("exercise_id")->references("id")->on("exercises")->onDelete("cascade");
         });
     }
 
@@ -33,5 +41,6 @@ class CreateDaysTable extends Migration
     public function down()
     {
         Schema::dropIfExists('days');
+        Schema::dropIfExists('day_exercise');
     }
 }
