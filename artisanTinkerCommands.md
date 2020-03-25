@@ -14,10 +14,17 @@ $day->exercise2 = "Test Monday exercise 2";
 $day->exercise3 = "Test Monday exercise 3";
 $day->exercise4 = "Test Monday exercise 4";
 $day->save();
-
 $day = new Day(); 
 $day->dayName = "Tuesday";
 $day->dayNumber = 2;
+$day->exercise1 = "Test Monday exercise 1";
+$day->exercise2 = "Test Monday exercise 2";
+$day->exercise3 = "Test Monday exercise 3";
+$day->exercise4 = "Test Monday exercise 4";
+$day->save();
+$day = new Day(); 
+$day->dayName = "Wednesday";
+$day->dayNumber = 3;
 $day->exercise1 = "Test Monday exercise 1";
 $day->exercise2 = "Test Monday exercise 2";
 $day->exercise3 = "Test Monday exercise 3";

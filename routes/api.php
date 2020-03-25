@@ -7,7 +7,7 @@ use App\Http\Controllers\API\Days;
 use App\Http\Controllers\API\Exercises;
 
 Route::get("/days", [Days::class, "index"]);
-Route::get("/day/{day}", [Exercises::class, "show"]);
+Route::get("/days/{day}", [Days::class, "show"]);
 
 Route::get("/exercises", [Exercises::class, "index"]);
 Route::get("/exercise/{exercise}", [Days::class, "show"]);
