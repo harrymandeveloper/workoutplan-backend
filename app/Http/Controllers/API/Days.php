@@ -19,7 +19,7 @@ class Days extends Controller
      */
     public function index()
     {
-        return Day::all();
+        return DaysResource::collection(Day::all());
     }
 
     /**
@@ -43,7 +43,7 @@ class Days extends Controller
      */
     public function show(Day $day)
     {
-        return $day;
+        return new ExerciseListResource($day);
     }
 
     /**
