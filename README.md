@@ -1,5 +1,24 @@
-# Workout Plan
-Coronavirus Home Workout Plan App - Back-end
+# COVID Fit - Self Coronavirus Home Workout Plan
+
+## Steps 
+On cloning the git Repo please follow the below steps:
+
+- composer install
+- vendor/bin/homestead make
+- copy the  .env.example into the .env
+- vagrant up
+- vagrant ssh
+- cd code
+- artisan migrate
+- Set the site to icorona.test
+
+## API Routes
+
+All future requests should use the root uri `http://icorona.test/api/` 
+
+
+Coronavirus Home Workout Plan - Back-end
+=======
 
 Front-end available at: https://github.com/natelloyd1/workoutplan-frontend
 
@@ -25,24 +44,10 @@ Dummy JSON output from 'exercises' is available here: https://drive.google.com/o
 Database in detail:
 https://docs.google.com/drawings/d/14N_clbtJ6jqmp6e97SOw3lfHR_DH3sF2H0lZYBsZFjI/edit?usp=sharing
 
-Days-of-the-Week
-
-ID
-Exercise-IDs
-
-
-
-Exercises
-
-ID
-Exercise-Name
-Repetitions
-Image-URL
-Difficulty
 
 ### Exercises
 #### `GET/days`
-This will return an array of day objects with an id for ea
+This will return an array of day objects with an id for each
 #### Data Format
 ```json
 {
