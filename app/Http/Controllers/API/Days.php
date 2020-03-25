@@ -26,17 +26,13 @@ class Days extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(DayRequest $request)
+    public function store(Request $request)
     {
         // only get the title and description fields
-        $data = $request->only(["exerciseName", "exerciseDescription"]); 
-        $exercise = Day::create($data);
-        // get back a collection of exercise objects
-        $exercise = Exercise::fromStrings($request->get("exercise")); 
+        $data = $request->only(["dayName", "dayNumber"]); 
+        $day = Day::create($data);
 
-        // sync the exercise: needs an array of Exercise ids
-        $exercise->exercise()->sync($exercise->pluck("id")->all()); 
-        return new DayResource($exercise);
+        return $day;
     }
   
 

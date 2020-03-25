@@ -17,10 +17,6 @@ class CreateDaysTable extends Migration
             $table->bigIncrements('id');
             $table->string('dayName');
             $table->integer('dayNumber');
-            $table->string('exercise1');
-            $table->string('exercise2');
-            $table->string('exercise3');
-            $table->string('exercise4');
             $table->timestamps();
         });
         

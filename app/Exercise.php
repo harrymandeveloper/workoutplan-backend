@@ -10,18 +10,7 @@ class Exercise extends Model
 {
     public $timestamps = false;
 
-    static public function fromStrings(array $strings) : Collection
-    {
-        return collect($strings)->map([Exercise::class, "fromString"])->unique("name");
-    }
-
-    static public function fromString(string $string) : Exercise
-    {
-        $string = trim($string);
-        $exercise = Exercise::where("name", $string)->first();
-        return $exercise ? $exercise : Exercise::create(["name" => $string]);
-    }
-
+    protected $fillable = ['exerciseName', 'exerciseDescription', 'exerciseRepetitions', 'exerciseImageURL', 'exerciseDifficulty'];
 
     public function days()
     {
