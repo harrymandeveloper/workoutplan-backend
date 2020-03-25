@@ -4,6 +4,8 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Exercise;
+
 
 class Exercises extends Controller
 {
@@ -14,7 +16,7 @@ class Exercises extends Controller
      */
     public function index()
     {
-        //
+        return Exercise::all();
     }
 
     /**
@@ -25,7 +27,9 @@ class Exercises extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+        return Exercise::create($data);
     }
 
     /**
@@ -34,9 +38,9 @@ class Exercises extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Exercise $exercise)
     {
-        //
+        return $exercise;
     }
 
     /**
@@ -46,9 +50,14 @@ class Exercises extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Exercise $exercise)
     {
-        //
+        // get the request data
+        $data = $request->all();
+        // update the exercise using the fill method 
+        // then save it to the database $exercise->fill($data)->save();
+        // return the updated version
+        return $exercise;
     }
 
     /**
@@ -57,8 +66,11 @@ class Exercises extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Exercise $exercise)
     {
-        //
-    }
+        // delete the exercise from the DB
+        $exercise->delete();
+        // use a 204 code as there is no content in the response
+        return response(null, 204);
+      }
 }
