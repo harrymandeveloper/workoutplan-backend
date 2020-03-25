@@ -4,7 +4,8 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Exercise;
+use App\Day;
+
 
 class Days extends Controller
 {
@@ -15,7 +16,7 @@ class Days extends Controller
      */
     public function index()
     {
-        echo 'hello world';
+        return Day::all();
     }
 
     /**
@@ -26,7 +27,9 @@ class Days extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+        return Day::create($data);
     }
 
     /**
@@ -35,9 +38,9 @@ class Days extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Day $day)
     {
-        //
+        return $day;
     }
 
     /**
@@ -47,9 +50,14 @@ class Days extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Day $day)
     {
-        //
+        // get the request data
+        $data = $request->all();
+        // update the day using the fill method 
+        // then save it to the database $day->fill($data)->save();
+        // return the updated version
+        return $day;
     }
 
     /**
@@ -58,8 +66,11 @@ class Days extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Day $day)
     {
-        //
-    }
+        // delete the day from the DB
+        $day->delete();
+        // use a 204 code as there is no content in the response
+        return response(null, 204);
+      }
 }
