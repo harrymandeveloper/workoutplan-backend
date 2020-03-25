@@ -5,6 +5,7 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Day;
+use App\Exercise;
 
 
 class Days extends Controller
@@ -25,12 +26,19 @@ class Days extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(DayRequest $request)
     {
-        $data = $request->all();
+        // only get the title and description fields
+        $data = $request->only(["exerciseName", "exerciseDescription"]); 
+        $exercise = Day::create($data);
+        // get back a collection of exercise objects
+        $exercise = Exercise::fromStrings($request->get("exercise")); 
 
-        return Day::create($data);
+        // sync the exercise: needs an array of Exercise ids
+        $exercise->exercise()->sync($exercise->pluck("id")->all()); 
+        return new DayResource($exercise);
     }
+  
 
     /**
      * Display the specified resource.
@@ -50,15 +58,19 @@ class Days extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Day $day)
+    public function update(DayRequest $request, Day $day)
     {
-        // get the request data
-        $data = $request->all();
-        // update the day using the fill method 
-        // then save it to the database $day->fill($data)->save();
-        // return the updated version
-        return $day;
+        // only get the title and day fields
+        $data = $request->only(["exerciseName", "exerciseDescription"]); 
+        $day->fill($data)->save();
+        // get back a collection of exercise objects
+        $exercises = Exercise::fromStrings($request->get("exercises")); 
+        // sync the exercises: needs an array of Exercise ids
+        $day->exercises()->sync($exercises->pluck("id")->all());
+
+        return new DayResource($day);
     }
+  
 
     /**
      * Remove the specified resource from storage.
