@@ -1,4 +1,4 @@
-# COVID Fit - Self Coronavirus Home Workout Plan
+# COVID Fit - Coronavirus Home Workout Plan
 
 ## Steps 
 On cloning the git Repo please follow the below steps:
