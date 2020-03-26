@@ -11,7 +11,6 @@ On cloning the git Repo please follow the below steps:
 - cd code
 - artisan migrate
 - artisan db:seed
-- Map site to icorona.test
 
 
 
