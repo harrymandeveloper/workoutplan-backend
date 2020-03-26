@@ -3,6 +3,7 @@
 namespace App\Http\Resources\API;
 
 use Illuminate\Http\Resources\Json\JsonResource;
+use App\Exercise;
 
 class ExerciseListResource extends JsonResource
 {
@@ -14,6 +15,8 @@ class ExerciseListResource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        return [
+            "exercises" => $this->exercises()->getResults(),
+        ];
     }
 }

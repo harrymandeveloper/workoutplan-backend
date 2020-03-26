@@ -20,11 +20,7 @@ class DaysResource extends JsonResource
 
         return [
             "name" => $this->dayName,
-            "exercises" => [
-                "exercise1" => Exercise::find(1)->exerciseName,
-                "exercise2" => Exercise::find(2)->exerciseName,
-                "exercise3" => Exercise::find(3)->exerciseName,
-                "exercise4" => Exercise::find(4)->exerciseName,
+            "exercises" => [$this->exercises->pluck("exerciseName")
             ],
             "noOfDays" => $daysCount,
         ];
