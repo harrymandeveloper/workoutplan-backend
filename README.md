@@ -5,13 +5,14 @@ On cloning the git Repo please follow the below steps:
 
 - composer install
 - vendor/bin/homestead make
+- Homestead.yaml file edit for memory allocation
 - vagrant up
 - vagrant ssh
 - cd code
 - artisan migrate
-- Set the site to icorona.test
+- artisan db:seed
+- Map site to icorona.test
 
-## API Routes 
 
 
 Coronavirus Home Workout Plan - Back-end
@@ -34,9 +35,7 @@ Back-end:
 - There is a 'many to many' relationship between days of the week and these exercises.
 - Each exercise carries a title and a short description.
 - Each day consists of a number 1-7 and a series of exercises per day.
-
-
-Dummy JSON output from 'exercises' is available here: https://drive.google.com/open?id=1PrgvFtBfk2YK473Mp4npUNPkbqfLS3Ni
+ 
 
 Database in detail:
 https://docs.google.com/drawings/d/14N_clbtJ6jqmp6e97SOw3lfHR_DH3sF2H0lZYBsZFjI/edit?usp=sharing
@@ -50,15 +49,9 @@ This will return an array of day objects with an id for each
 {
     "days" : [
         {
-            "id" : 1,
-            "exercises" : [
-                "push-ups",
-                "pull-ups",
-                "burpees",
-                "crunches"
-            ],
-            "numberOfDays" : 7,
-        }
+		"dayName":"Monday",
+		"dayNumber": 1
+	}
     ]
 }
 ```
@@ -71,32 +64,35 @@ This will return an array of exercises for the specified day
         {
             "name" : "push-ups",
             "description" : "...",
-            "reps" : 8,
+            "repetitions" : 8,
             "imageURL" : "..."
         }
         {
             "name" : "pull-ups",
             "description" : "...",
-            "reps" : 5,
+            "repetitions" : 5,
             "imageURL" : "..."
         }
         {
             "name" : "burpees",
             "description" : "...",
-            "reps" : 12,
+            "repetitions" : 12,
             "imageURL" : "..."
         }
         {
             "name" : "crunches",
             "description" : "...",
-            "reps" : 12,
+            "repetitions" : 12,
             "imageURL" : "..."
         }
     ]
 }
 ```
 
+
 Stretch goals:
+
+Adding a seeder to seed the database automatically.
 
 Adding checkboxes to measure progress – which potentially can be put into local storage (React) and a checkbox with a timer.
 
