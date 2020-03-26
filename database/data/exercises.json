@@ -1,132 +1,133 @@
 [
     {
-        "id": 1,
         "exerciseName": "Squat",
         "exerciseDescription": "This is an exercise in which the body weight is pushed up with the legs from a position with knees bent at a 90 degree angle.",
         "exerciseRepetitions": 4,
         "exerciseImageURL": "img/squat.jpg",
         "exerciseDifficulty": 5,
         "created_at": null,
-        "updated_at": null
+        "updated_at": null,
+        "days":[1, 2]
     },
     {
-        "id": 2,
+
         "exerciseName": "Sit Ups",
         "exerciseDescription": "An exercise in which the entire back is lifted off the ground by contracting the abdominal muscles.",
         "exerciseRepetitions": 6,
-        "exerciseImageURL": "img/sit ups.jpg",
+        "exerciseImageURL": "img/sit_ups.jpg",
         "exerciseDifficulty": 4,
         "created_at": null,
-        "updated_at": null
+        "updated_at": null,
+        "days":[3, 4]
     },
     {
-        "id": 3,
+
         "exerciseName": "Press-Ups",
         "exerciseDescription": "The press-up is an exercise in which the body is lifted from a prone position by pressing with the arms.",
         "exerciseRepetitions": 4,
-        "exerciseImageURL": "img/press-ups.jpg",
+        "exerciseImageURL": "img/press_ups.jpg",
         "exerciseDifficulty": 8,
         "created_at": null,
-        "updated_at": null
+        "updated_at": null,
+        "days":[5, 6]
     },
     {
-        "id": 4,
+
         "exerciseName": "Mountain Climbers",
         "exerciseDescription": "Plank position with arms and legs long. Keep your abs pulled in and your body straight. Squeeze your glutes and pull your shoulders away from your ears.",
         "exerciseRepetitions": 6,
-        "exerciseImageURL": "img/mountain climbers.jpg",
+        "exerciseImageURL": "img/mountain_climbers.jpg",
         "exerciseDifficulty": 10,
         "created_at": null,
-        "updated_at": null
+        "updated_at": null,
+        "days":[1, 7]
     },
     {
-        "id": 5,
+
         "exerciseName": "Jumping Jacks",
         "exerciseDescription": "This is a cardio exercise which requires jumping between a position with arms to the side and legs together to a second position with arms straight above the head and legs wide apart.",
         "exerciseRepetitions": 4,
-        "exerciseImageURL": "img/jumping jacks.jpg",
+        "exerciseImageURL": "img/jumping_jacks.jpg",
         "exerciseDifficulty": 6,
         "created_at": null,
-        "updated_at": null
+        "updated_at": null,
+        "days":[2, 3]
     },
     {
-        "id": 6,
+
         "exerciseName": "Burpees",
         "exerciseDescription": "This is a cardio exercie which requires squatting down, kicking the feet back and extending the body, bringing the feet back in, then jumping straight up.",
         "exerciseRepetitions": 6,
         "exerciseImageURL": "img/burpees.jpg",
         "exerciseDifficulty": 9,
         "created_at": null,
-        "updated_at": null
+        "updated_at": null,
+        "days":[3, 4]
     },
     {
-        "id": 7,
+
         "exerciseName": "Lunges",
         "exerciseDescription": "This is an exercise in which weight is pressed up from a position in which one leg is in front of the body with knee bent and foot flat on the ground, and the other leg is behind the body. The body is pressed up so that both knees are straightened.",
         "exerciseRepetitions": 10,
         "exerciseImageURL": "img/lunges.jpg",
         "exerciseDifficulty": 2,
         "created_at": null,
-        "updated_at": null
+        "updated_at": null,
+        "days":[5, 6]
     },
     {
-        "id": 8,
+
         "exerciseName": "High-Knees",
         "exerciseDescription": "This is a cardio exercise which requires running by bringing the knees high so that the hip makes at least a right angle",
         "exerciseRepetitions": 6,
-        "exerciseImageURL": "img/high-knees.jpg",
+        "exerciseImageURL": "img/high_knees.jpg",
         "exerciseDifficulty": 5,
         "created_at": null,
-        "updated_at": null
+        "updated_at": null,
+        "days":[1, 7]
     },
     {
-        "id": 9,
+
         "exerciseName": "Wall Sits",
         "exerciseDescription": "This is an isometric exercise in which knees and hips are kept at right angles with the back against a wall",
         "exerciseRepetitions": 4,
         "exerciseImageURL": "img/wall_sits.jpg",
         "exerciseDifficulty": 6,
         "created_at": null,
-        "updated_at": null
+        "updated_at": null,
+        "days":[2, 3]
     },
     {
-        "id": 10,
+    
         "exerciseName": "Leg Raise",
         "exerciseDescription": "This is an exercise in which legs are raised up from a lying position while keeping knees and rest of the body straight.",
         "exerciseRepetitions": 4,
         "exerciseImageURL": "img/leg_raise.jpg",
         "exerciseDifficulty": 7,
         "created_at": null,
-        "updated_at": null
+        "updated_at": null,
+        "days":[3, 4]
     },
     {
-        "id": 11,
+    
         "exerciseName": "Step Up",
         "exerciseDescription": "This is an exercise in which the body weight is pushed up by stepping up into a higher platform with one leg.",
         "exerciseRepetitions": 6,
         "exerciseImageURL": "img/step_up.jpg",
         "exerciseDifficulty": 1,
         "created_at": null,
-        "updated_at": null
+        "updated_at": null,
+        "days":[5, 6]
     },
     {
-        "id": 12,
-        "exerciseName": "Step Up",
-        "exerciseDescription": "This is an exercise in which the body weight is pushed up by stepping up into a higher platform with one leg.",
-        "exerciseRepetitions": 6,
-        "exerciseImageURL": "img/step_up.jpg",
-        "exerciseDifficulty": 1,
-        "created_at": null,
-        "updated_at": null
-    },
-    {
-        "id": 13,
+    
         "exerciseName": "Chair Dip",
         "exerciseDescription": "This is a variation of the dip in which chest and legs are kept straight and hands close together to focus on the triceps muscle.",
         "exerciseRepetitions": 4,
         "exerciseImageURL": "img/chair_dip.jpg",
         "exerciseDifficulty": 5,
         "created_at": null,
-        "updated_at": null
+        "updated_at": null,
+        "days":[1, 7]
     }
 ]
