@@ -10,7 +10,12 @@ class Exercise extends Model
 {
     public $timestamps = false;
 
-    protected $fillable = ['exerciseName', 'exerciseDescription', 'exerciseRepetitions', 'exerciseImageURL', 'exerciseDifficulty'];
+    protected $fillable = [
+        'exerciseName', 
+        'exerciseDescription', 
+        'exerciseRepetitions', 
+        'exerciseImageURL', 
+        'exerciseDifficulty'];
 
     public function days()
     {
