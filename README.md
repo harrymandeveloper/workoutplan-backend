@@ -5,7 +5,6 @@ On cloning the git Repo please follow the below steps:
 
 - composer install
 - vendor/bin/homestead make
-- copy the  .env.example into the .env
 - vagrant up
 - vagrant ssh
 - cd code
