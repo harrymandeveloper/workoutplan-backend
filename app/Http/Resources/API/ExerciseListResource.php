@@ -16,13 +16,7 @@ class ExerciseListResource extends JsonResource
     public function toArray($request)
     {
         return [
-            "name" => $this->dayName,
-            "exercises" => [
-                Exercise::find(1),
-                Exercise::find(2),
-                Exercise::find(3),
-                Exercise::find(4),
-            ],
+            "exercises" => $this->exercises()->getResults(),
         ];
     }
 }
