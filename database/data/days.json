@@ -1,0 +1,30 @@
+[
+	{
+		"dayName":"Monday",
+		"dayNumber": 1
+	},
+	{
+		"dayName":"Tuesday",
+		"dayNumber": 2
+	},
+	{
+		"dayName":"Wednesday",
+		"dayNumber": 3
+	},
+	{
+		"dayName":"Thursday",
+		"dayNumber": 4
+	},
+	{
+		"dayName":"Friday",
+		"dayNumber": 5
+	},
+	{
+		"dayName":"Saturday",
+		"dayNumber": 6
+	},
+	{
+		"dayName":"Sunday",
+		"dayNumber": 7
+	}
+]
