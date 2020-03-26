@@ -26,10 +26,16 @@ class Exercises extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        $data = $request->all();
 
-        return Exercise::create($data);
+    // We are looking to receive an array of day ids
+    {
+        $data = $request->only(['exerciseName', 'exerciseDescription', 'exerciseRepetitions', 'exerciseImageURL', 'exerciseDifficulty']);
+
+        $exercise = Exercise::create($data);
+
+        $exercise->days()->sync($request->days);
+
+        return $exercise;
     }
 
     /**
