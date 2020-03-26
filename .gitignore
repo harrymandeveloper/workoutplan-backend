@@ -14,4 +14,3 @@ Vagrantfile
 .vagrant/
 .DS_Store
 .styleci.yml
-.vagrant/machines/

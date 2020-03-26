@@ -3,9 +3,12 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\API\DaysResource;
+use App\Http\Resources\API\ExerciseListResource;
 use Illuminate\Http\Request;
 use App\Day;
 use App\Exercise;
+
 
 
 class Days extends Controller
@@ -17,7 +20,7 @@ class Days extends Controller
      */
     public function index()
     {
-        return Day::all();
+        return DaysResource::collection(Day::all());
     }
 
     /**
@@ -44,7 +47,7 @@ class Days extends Controller
      */
     public function show(Day $day)
     {
-        return $day;
+        return new ExerciseListResource($day);
     }
 
     /**
