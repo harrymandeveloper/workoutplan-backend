@@ -17,12 +17,24 @@ class ExercisesTableSeeder extends Seeder
         $data=json_decode($json);
         foreach ($data as $obj) {
             Exercise::create(array(
-                'exerciseName' =>$obj->name,
-                'exerciseDescription' =>$obj->description,
-                'exerciseRepetitions' =>$obj->repetitions,
-                'exerciseImageURL' =>$obj->image,
-                'exerciseDifficulty' =>$obj->difficulty
+                'exerciseName' =>$obj->exerciseName,
+                'exerciseDescription' =>$obj->exerciseDescription,
+                'exerciseRepetitions' =>$obj->exerciseRepetitions,
+                'exerciseImageURL' =>$obj->exerciseImageURL,
+                'exerciseDifficulty' =>$obj->exerciseDifficulty,
             ));
+           
+           
+            // // get the id of the last exercise made
+
+            // $exerciseid = Exercise::last
+            // foreach ($obj->days) { 
+            //     // within the loop populate the pivot table
+            //     // mapping the day to the id
+            //     // foreach    
+
+
+            
         }
     }
 }
