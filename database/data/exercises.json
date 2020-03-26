@@ -3,14 +3,13 @@
         "exerciseName": "Squat",
         "exerciseDescription": "This is an exercise in which the body weight is pushed up with the legs from a position with knees bent at a 90 degree angle.",
         "exerciseRepetitions": 4,
-        "exerciseImageURL": "img/squat.jpg",
+        "exerciseImageURL": "../components/img/squat.jpg",
         "exerciseDifficulty": 5,
         "created_at": null,
         "updated_at": null,
         "days":[1, 2]
     },
     {
-
         "exerciseName": "Sit Ups",
         "exerciseDescription": "An exercise in which the entire back is lifted off the ground by contracting the abdominal muscles.",
         "exerciseRepetitions": 6,

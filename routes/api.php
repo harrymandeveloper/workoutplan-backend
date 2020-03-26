@@ -7,6 +7,7 @@ use App\Http\Controllers\API\Days;
 use App\Http\Controllers\API\Exercises;
 
 Route::get("/days", [Days::class, "index"]);
+Route::get("/days", [Days::class, "show"]);
 Route::get("/days/{day}", [Days::class, "show"]);
 Route::post("/days", [Days::class, "store"]);
 
