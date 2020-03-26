@@ -16,9 +16,9 @@ class DaysTableSeeder extends Seeder
         $json= File::get('database/data/days.json');
         $data=json_decode($json);
         foreach ($data as $obj) {
-            Exercise::create(array(
-                'dayName' =>$obj->name,
-                'dayNumber' =>$obj->description,
+            Day::create(array(
+                "dayName" =>$obj->dayName,
+                "dayNumber" =>$obj->dayNumber,
             ));
         }
     }

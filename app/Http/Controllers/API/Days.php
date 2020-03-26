@@ -20,7 +20,7 @@ class Days extends Controller
      */
     public function index()
     {
-        return DaysResource::collection(Day::all());
+        return Day::all();
     }
 
     /**
