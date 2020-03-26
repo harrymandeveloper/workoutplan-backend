@@ -3,13 +3,13 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\API\DaysResource;
+use App\Http\Resources\API\ExerciseListResource;
 use Illuminate\Http\Request;
 use App\Day;
-use App\Http\Resources\API\ExerciseListResource;
-
-
 use App\Exercise;
-use App\Http\Resources\API\DaysResource;
+
+
 
 class Days extends Controller
 {
@@ -31,10 +31,13 @@ class Days extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->all();
+        // only get the title and description fields
+        $data = $request->only(["dayName", "dayNumber"]); 
+        $day = Day::create($data);
 
-        return Day::create($data);
+        return $day;
     }
+  
 
     /**
      * Display the specified resource.
@@ -54,15 +57,19 @@ class Days extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Day $day)
+    public function update(DayRequest $request, Day $day)
     {
-        // get the request data
-        $data = $request->all();
-        // update the day using the fill method 
-        // then save it to the database $day->fill($data)->save();
-        // return the updated version
-        return $day;
+        // only get the title and day fields
+        $data = $request->only(["exerciseName", "exerciseDescription"]); 
+        $day->fill($data)->save();
+        // get back a collection of exercise objects
+        $exercises = Exercise::fromStrings($request->get("exercises")); 
+        // sync the exercises: needs an array of Exercise ids
+        $day->exercises()->sync($exercises->pluck("id")->all());
+
+        return new DayResource($day);
     }
+  
 
     /**
      * Remove the specified resource from storage.
