@@ -5,16 +5,13 @@ On cloning the git Repo please follow the below steps:
 
 - composer install
 - vendor/bin/homestead make
-- copy the  .env.example into the .env
 - vagrant up
 - vagrant ssh
 - cd code
 - artisan migrate
 - Set the site to icorona.test
 
-## API Routes
-
-All future requests should use the root uri `http://icorona.test/api/` 
+## API Routes 
 
 
 Coronavirus Home Workout Plan - Back-end
