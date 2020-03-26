@@ -19,10 +19,6 @@ class DaysTableSeeder extends Seeder
             Exercise::create(array(
                 'dayName' =>$obj->name,
                 'dayNumber' =>$obj->description,
-                'exercise1' =>$obj->exercise1,
-                'exercise2' =>$obj->exercise2,
-                'exercise3' =>$obj->exercise3,
-                'exercise4' =>$obj->exercise4
             ));
         }
     }
