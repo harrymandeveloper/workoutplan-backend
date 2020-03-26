@@ -11,9 +11,7 @@ On cloning the git Repo please follow the below steps:
 - artisan migrate
 - Set the site to icorona.test
 
-## API Routes
-
-All future requests should use the root uri `http://icorona.test/api/` 
+## API Routes 
 
 
 Coronavirus Home Workout Plan - Back-end
