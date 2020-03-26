@@ -17,8 +17,6 @@ On cloning the git Repo please follow the below steps:
 Coronavirus Home Workout Plan - Back-end
 =======
 
-Front-end available at: https://github.com/natelloyd1/workoutplan-frontend
-
 A simple one page app designed to offer a series of exercises that may be performed to keep fit at home while self-isolating.
 
 Functional Spec:
