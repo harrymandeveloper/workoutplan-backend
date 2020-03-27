@@ -1,30 +1,30 @@
 [
 	{
-		"dayName":"Monday",
+		"dayName":"Morning Kickstarter",
 		"dayNumber": 1
 	},
 	{
-		"dayName":"Tuesday",
+		"dayName":"Calisthenics for Coding",
 		"dayNumber": 2
 	},
 	{
-		"dayName":"Wednesday",
+		"dayName":"Bodyweight Pulse-raiser",
 		"dayNumber": 3
 	},
 	{
-		"dayName":"Thursday",
+		"dayName":"Stay Home, Stay Fit",
 		"dayNumber": 4
 	},
 	{
-		"dayName":"Friday",
+		"dayName":"Lunchtime Fitness",
 		"dayNumber": 5
 	},
 	{
-		"dayName":"Saturday",
+		"dayName":"GET MOVING",
 		"dayNumber": 6
 	},
 	{
-		"dayName":"Sunday",
+		"dayName":"Evening Workout",
 		"dayNumber": 7
 	}
 ]

@@ -122,3 +122,25 @@ $exercise->exerciseRepetitions = 4;
 $exercise->exerciseImageURL = "img/chair_dip.jpg";
 $exercise->exerciseDifficulty  = 5;
 $exercise->save();
+
+$day = Day::find(1)
+$day->dayName = 'Morning Kickstarter'
+$day->save
+$day = Day::find(2)
+$day->dayName = 'Calisthenics for Coding'
+$day->save
+$day = Day::find(3)
+$day->dayName = 'Bodyweight Pulse-raiser'
+$day->save
+$day = Day::find(4)
+$day->dayName = 'Stay Home, Stay Fit'
+$day->save
+$day = Day::find(5)
+$day->dayName = 'Lunchtime Fitness'
+$day->save
+$day = Day::find(6)
+$day->dayName = 'GET MOVING'
+$day->save
+$day = Day::find(7)
+$day->dayName = 'Evening Workout'
+$day->save
