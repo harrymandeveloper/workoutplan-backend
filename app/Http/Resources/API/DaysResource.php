@@ -20,8 +20,7 @@ class DaysResource extends JsonResource
 
         return [
             "name" => $this->dayName,
-            "exercises" => [$this->exercises->pluck("exerciseName")
-            ],
+            "exercises" => $this->exercises->pluck("exerciseName"),
             "noOfDays" => $daysCount,
         ];
     }
