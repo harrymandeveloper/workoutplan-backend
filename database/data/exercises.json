@@ -57,7 +57,7 @@
         "exerciseDifficulty": 9,
         "created_at": null,
         "updated_at": null,
-        "days":[3, 4]
+        "days":[2, 4]
     },
     {
         "exerciseName": "Lunges",
