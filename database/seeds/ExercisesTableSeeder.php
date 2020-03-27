@@ -26,7 +26,6 @@ class ExercisesTableSeeder extends Seeder
            
            
             // // get the id of the last exercise made
-
             // $exerciseid = Exercise::last
             // foreach ($obj->days) { 
             //     // within the loop populate the pivot table
